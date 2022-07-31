@@ -1,0 +1,23 @@
+{
+  "name": "my-dash-paper",
+  "version": "1.0.0",
+  "description": "E-paper Dashboard on top of your work desk.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aahlad-allari/my-dash-paper.git"
+  },
+  "author": "Aahlad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aahlad-allari/my-dash-paper/issues"
+  },
+  "homepage": "https://github.com/aahlad-allari/my-dash-paper#readme",
+  "dependencies": {
+    "puppeteer": "^15.5.0",
+    "zx": "^7.0.7"
+  }
+}
