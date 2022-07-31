@@ -39,7 +39,11 @@ class DrawPillow():
 
     def draw_text(self, input_text):
         self.clear_frame()
-        self.draw.text((2, 20), input_text, font = self.font18, fill = 0)
+        line_no = 0
+        words = input_text.split()
+        for word in words:
+            self.draw.text((2, line_no*120), word, font = self.font48, fill = 0)
+            line_no +=1
         self.renderer.draw(self.Himage)
     
     def draw_image(self, name="image.png"):
