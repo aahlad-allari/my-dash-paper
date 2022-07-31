@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/aahlad-allari/my-dash-paper#readme",
   "dependencies": {
+    "fs-extra": "^10.1.0",
     "puppeteer": "^15.5.0",
     "zx": "^7.0.7"
   }
