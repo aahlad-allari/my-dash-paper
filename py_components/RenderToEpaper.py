@@ -11,7 +11,7 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-from waveshare_epd import epd7in5_V2
+from lib.waveshare_epd import epd7in5_V2
 import time
 import traceback
 
