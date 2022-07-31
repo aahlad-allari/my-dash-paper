@@ -6,8 +6,8 @@ E-paper Dashboard on top of your work desk.
 - EPaper(Black&White) 7.5 inch
 
 # Resources
-[Waveshare](https://github.com/waveshare/e-Paper)
-[zx](https://github.com/google/zx)
-Python
-Nodejs
-[Puppeteer](https://github.com/puppeteer/puppeteer)
+- [Waveshare](https://github.com/waveshare/e-Paper)
+- [zx](https://github.com/google/zx)
+- Python3
+- Nodejs
+- [Puppeteer](https://github.com/puppeteer/puppeteer)
