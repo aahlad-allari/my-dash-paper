@@ -18,6 +18,6 @@ else:
 draw = DrawPillow.DrawPillow(renderer)
 # draw.draw_text("Hello How are you? are you feeling well")
 
-PY_CAL(SCRIPT_DIR).cal(year = 2022, month = 8)
+PY_CAL(SCRIPT_DIR).cal(year = 2022, month = 8, grid=False, fill=True)
 draw.draw_image()
 # draw.draw_text(hacker_news_py.get_text(), size=18, newline_delim="\n")

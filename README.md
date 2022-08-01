@@ -33,6 +33,10 @@ sudo pip3 install Pillow
 # Install pip on RaspberryPi
 sudo python3 -m pip install -U pip
 sudo python3 -m pip install -U matplotlib
+sudo python3 -m pip install -U numpy 
+
+#I raninto issue with numpy (ImportError: libcblas.so.3: cannot open shared object file: No such file or directory)
+sudo apt-get install libjasper-dev
 ```
 
 

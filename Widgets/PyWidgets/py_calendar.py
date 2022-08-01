@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 class PY_CAL():
     def __init__(self,root_dir):
         self.root_dir = root_dir
-        self.fillday_list = [(12, 24), (12, 25)]
+        self.fillday_list = [(8, 1)]
 
         # Japanese holiday
         self.holiday_list = [
@@ -72,9 +72,9 @@ class PY_CAL():
                 (i - 0.5, j - 0.5),
                 1,
                 1,
-                edgecolor="blue",
-                facecolor="red",
-                alpha=0.1,
+                edgecolor="black",
+                facecolor="black",
+                alpha=1,
                 fill=True,
             )
         )
@@ -88,6 +88,9 @@ class PY_CAL():
     def check_color_day(self,year, month, day, weekday):
         if (month, day) in self.holiday_list:
             return "red"
+        
+        if (month, day) in self.fillday_list:
+            return "white"
 
         if weekday == 6:  # Sunday
             return "red"
@@ -129,6 +132,7 @@ class PY_CAL():
 
     def cal(self,year, month, grid=False, fill=False):
         fig = plt.figure()
+        plt.rcParams.update({'font.size': 14})
         ax = fig.add_subplot()
         ax.axis([0, 7, 0, 7])
         ax.axis("off")
