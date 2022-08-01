@@ -18,3 +18,7 @@ venv.bak/
 #Test
 output/
 screenshots/
+
+
+#Mac
+.DS_Store

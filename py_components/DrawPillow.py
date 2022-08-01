@@ -37,13 +37,25 @@ class DrawPillow():
     def draw_circle():
         pass
 
-    def draw_text(self, input_text):
-        self.clear_frame()
+    def draw_text(self, input_text, size=24, newline_delim="\n"):
+        font_size = self.font18
+        if size == 18:
+            font_size = self.font24
+        elif size == 24:
+            font_size = self.font18
+        else:
+            font_size = self.font48
         line_no = 0
-        words = input_text.split()
+
+        if(newline_delim == "word"):
+            words = input_text.split()
+        else:
+            words = input_text.split("\n")
+        
         for word in words:
-            self.draw.text((2, line_no*120), word, font = self.font48, fill = 0)
-            line_no +=1
+                self.draw.text((2, line_no*size*3), word, font = font_size, fill = 0)
+                line_no +=1
+
         self.renderer.draw(self.Himage)
     
     def draw_image(self, name="image.png"):
