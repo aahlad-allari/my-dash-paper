@@ -29,6 +29,10 @@ sudo apt-get install python-imaging
 sudo pip3 install spidev
 sudo pip3 install RPi.GPIO
 sudo pip3 install Pillow
+
+# Install pip on RaspberryPi
+sudo python3 -m pip install -U pip
+sudo python3 -m pip install -U matplotlib
 ```
 
 

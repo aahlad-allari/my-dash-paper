@@ -2,6 +2,10 @@ const puppeteer = require('puppeteer');
 const os = require('os');
 const fs = require('fs-extra');
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 let config = {
   headless: true,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -21,6 +25,9 @@ exports.generate_image = (url='https://www.aahlad.dev') => {
     await page.goto(url);
     const path = `screenshots/`;
     fs.mkdirp(path);
+
+    await sleep(2000);
+
     await page.screenshot({ path: `${path}/image.png` });
 
     await browser.close();

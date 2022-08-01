@@ -30,7 +30,11 @@ let default_func = async () => {
 
 let load_calendar = async () => {
     await generate_image("http://127.0.0.1:3009/Widgets/LocalWeb/Calendar/cal")
-    await $`python3 orchestrator.py`
+    await write_to_screen()
+}
+
+let py_ochestrator = async () => {
+    await write_to_screen()
 }
 
 switch (c) {
@@ -44,6 +48,10 @@ switch (c) {
 
     case "load-calendar":
         await load_calendar()
+        break;
+
+    case "py":
+        await py_ochestrator()
         break;
 
     default:

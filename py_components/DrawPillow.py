@@ -59,8 +59,9 @@ class DrawPillow():
         self.renderer.draw(self.Himage)
     
     def draw_image(self, name="image.png"):
-        self.Himage = Image.open(os.path.join(screenshotsdir, 'image.png'))
-        self.renderer.draw(self.Himage)
+        self.Himage = Image.open(os.path.join(screenshotsdir, name))
+        self.Himage.thumbnail(size=(480, 800), resample=Image.ANTIALIAS)
+        self.renderer.draw(self.Himage.convert('1'))
 
     def park(self):
         pass
