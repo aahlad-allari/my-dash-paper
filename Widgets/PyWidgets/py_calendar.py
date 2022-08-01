@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 class PY_CAL():
     def __init__(self,root_dir):
         self.root_dir = root_dir
-        self.fillday_list = [(8, 1)]
+        self.fillday_list = [(datetime.datetime.now().month, datetime.datetime.now().day)]
 
         # Japanese holiday
         self.holiday_list = [
@@ -78,6 +78,18 @@ class PY_CAL():
                 fill=True,
             )
         )
+    
+    def fill_circle(self,ax, i, j):
+        ax.add_patch(
+            patches.Circle(
+                (i, j),
+                radius=0.35,
+                edgecolor="black",
+                facecolor="black",
+                alpha=1,
+                fill=True,
+            )
+        )
 
 
     def check_fill_day(self,year, month, day, weekday):
@@ -122,7 +134,8 @@ class PY_CAL():
             color = self.check_color_day(year, month, day, weekday)
 
             if fill and self.check_fill_day(year, month, day, weekday):
-                self.fill_box(ax, i, j)
+                # self.fill_box(ax, i, j)
+                self.fill_circle(ax, i, j)
 
             self.label_day(ax, day, i, j, color)
             weekday = (weekday + 1) % 7
@@ -130,7 +143,7 @@ class PY_CAL():
                 j += y_offset
 
 
-    def cal(self,year, month, grid=False, fill=False):
+    def cal(self, year=datetime.datetime.now().year, month=datetime.datetime.now().month, grid=False, fill=False):
         fig = plt.figure()
         plt.rcParams.update({'font.size': 14})
         ax = fig.add_subplot()
@@ -160,4 +173,4 @@ class PY_CAL():
         wi, hi = fig.get_size_inches()
         fig.set_size_inches(hi*(w/h), hi)
         plt.savefig(os.path.join(screenshot_dir, 'image.png'),format='png',
-            dpi=h/hi)
+            dpi=h/hi, bbox_inches='tight',  pad_inches=0.1)
