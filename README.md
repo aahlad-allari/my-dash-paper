@@ -30,3 +30,9 @@ sudo pip3 install spidev
 sudo pip3 install RPi.GPIO
 sudo pip3 install Pillow
 ```
+
+
+```bash
+npm install -g sass
+npm install -g http-server
+```

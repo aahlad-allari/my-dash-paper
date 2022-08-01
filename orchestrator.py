@@ -15,6 +15,6 @@ else:
 
 
 draw = DrawPillow.DrawPillow(renderer)
-draw.draw_text("Hello How are you? are you feeling well")
-# draw.draw_image()
-draw.draw_text(hacker_news_py.get_text(), size=18, newline_delim="\n")
+# draw.draw_text("Hello How are you? are you feeling well")
+draw.draw_image()
+# draw.draw_text(hacker_news_py.get_text(), size=18, newline_delim="\n")
