@@ -58,6 +58,11 @@ let hackernews = async (text) => {
     await write_to_screen("hackernews")
 }
 
+let dadjoke = async () =>{
+    $`echo Dad Joke`
+    write_to_screen('dadjoke')
+}
+
 switch (c) {
     case "start-static-server":
         await start_static_server()
@@ -85,6 +90,11 @@ switch (c) {
 
     case "hackernews":
         await hackernews(url)
+        break;
+    
+
+    case "dadjoke":
+        await dadjoke()
         break;
 
     default:

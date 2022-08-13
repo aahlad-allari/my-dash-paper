@@ -17,6 +17,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 from py_components import DrawPillow
 from Widgets import hacker_news_py
 from Widgets.PyWidgets.py_calendar import PY_CAL
+from Widgets.PyWidgets.dad_joke import DAD_JOKE
 
     
 
@@ -49,5 +50,8 @@ if __name__ == '__main__':
             draw.draw_image()
         elif mode == 'hackernews':
             draw.draw_text(hacker_news_py.get_text(), size=24, newline_delim="\n")
+        elif mode == 'dadjoke':
+            joke = DAD_JOKE()
+            draw.draw_text(joke.shoot(), size=48, newline_delim="\n")
         else:
             draw.draw_text("Pease provide mode to draw..")

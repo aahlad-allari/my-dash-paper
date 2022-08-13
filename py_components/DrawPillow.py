@@ -21,9 +21,11 @@ class DrawPillow():
         self.width = 480
         self.height = 800
 
-        self.font24 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 24)
-        self.font48 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 120)
+
         self.font18 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 18)
+        self.font24 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 24)
+        self.font48 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 48)
+        self.font72 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 72)
 
         self.renderer = renderer()
 
@@ -37,18 +39,27 @@ class DrawPillow():
     def draw_circle():
         pass
 
+    def get_fonts(self,size=18, style='Font.ttc'):
+        return ImageFont.truetype(os.path.join(assets, style), size)
+
     def draw_text(self, input_text, size=24, newline_delim="\n"):
-        font_size = self.font18
+        font_size = self.get_fonts(18)
         line_size = 20
         if size == 18:
-            font_size = self.font18
+            font_size = self.get_fonts(18)
             line_size = 20
         elif size == 24:
-            font_size = self.font24
+            font_size = self.get_fonts(24)
             line_size = 26
+        elif size == 48:
+            font_size = self.get_fonts(48)
+            line_size = 50
+        elif size == 72:
+            font_size = self.get_fonts(72)
+            line_size = 74
         else:
-            font_size = self.font48
-            line_size = 120
+            font_size = self.get_fonts(120)
+            line_size = 122
         line_no = 0
 
         if(newline_delim == "word"):
