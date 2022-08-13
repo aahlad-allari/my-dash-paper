@@ -6,7 +6,7 @@ widgets:
       url: https://aahlad.dev
     type: web
     schedule: morning
-    
+
   - name: webpage
     cmd: webpage 
     args:
@@ -27,8 +27,8 @@ widgets:
   - name: Wishes
     cmd: write_text
     args:
-       message: how are you?
-       fontsize: 18
+       message: You can do it!!
+       fontsize: 120
     type: web
     schedule: morning
   
