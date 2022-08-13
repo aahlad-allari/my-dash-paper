@@ -48,10 +48,23 @@ npm install -g http-server
 
 ## How to use
 
+### If you want to use cli you and use the following commands
 ```bash
-zx test.mjs --c=web-page -url=http://google.com
-zx test.mjs --c=web-calendar
-zx test.mjs --c=py-calendar
-zx test.mjs --c=text -message="how are you"
+zx test.mjs --c=webpage -url=http://google.com
+zx test.mjs --c=web_calendar
+zx test.mjs --c=py_calendar
+zx test.mjs --c=wite_text -message="how are you"
 zx test.mjs --c=hackernews
+```
+
+## If you want to run daemon which rotates all the widgets in 1 min interval
+
+```bash
+zx daemon.mjs --start
+```
+
+To Stop the daemon
+
+```bash
+zx daemon.mjs --stop
 ```

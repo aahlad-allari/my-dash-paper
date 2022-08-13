@@ -18,7 +18,10 @@
   "homepage": "https://github.com/aahlad-allari/my-dash-paper#readme",
   "dependencies": {
     "fs-extra": "^10.1.0",
+    "js-yaml": "^4.1.0",
+    "moment": "^2.29.4",
     "puppeteer": "^15.5.0",
+    "ramda": "^0.28.0",
     "zx": "^7.0.7"
   }
 }

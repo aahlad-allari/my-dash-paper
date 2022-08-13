@@ -61,7 +61,6 @@ class DrawPillow():
             font_size = self.get_fonts(120)
             line_size = 122
         line_no = 0
-
         if(newline_delim == "word"):
             words = input_text.split()
         else:

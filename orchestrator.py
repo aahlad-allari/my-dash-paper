@@ -3,7 +3,7 @@ usage = '''
 EPaper Python Orchestrator..
 
 Usage:
-  orchestrator.py <mode> [<value>]
+  orchestrator.py <mode> [<value> <value1>]
 '''
 
 from docopt import docopt
@@ -39,8 +39,13 @@ if __name__ == '__main__':
         mode = args.get('<mode>')
         if mode == 'text':
             text = args.get('<value>')
+            fontsize = args.get('<value1>')
+            if fontsize:
+                fontsize = int(fontsize)
+            else:
+                fontsize = 24
             if text:
-                draw.draw_text(text.replace('\\n','\n'), 18)
+                draw.draw_text(text.replace('\\n','\n'), fontsize)
             else:
                 draw.draw_text("Please enter a valid text")
         elif mode == 'image':

@@ -1,0 +1,48 @@
+widgets:
+  
+  - name: webpage
+    cmd: webpage 
+    args:
+      url: https://aahlad.dev
+    type: web
+    schedule: morning
+    
+  - name: webpage
+    cmd: webpage 
+    args:
+      url: https://github.com/aahlad-allari
+    type: web
+    schedule: morning  
+  
+  - name: web_calendar
+    cmd: web_calendar
+    type: web
+    schedule: morning
+  
+  - name: py_calendar
+    cmd: py_calendar
+    type: py
+    schedule: morning
+  
+  - name: Wishes
+    cmd: write_text
+    args:
+       message: how are you?
+       fontsize: 18
+    type: web
+    schedule: morning
+  
+  - name: hackernews
+    cmd: hackernews
+    type: web
+    schedule: morning
+  
+  - name: dadjoke
+    cmd: dadjoke
+    type: web
+    schedule: random
+  
+  - name: greetings
+    cmd: greetings
+    type: web
+    schedule: random
