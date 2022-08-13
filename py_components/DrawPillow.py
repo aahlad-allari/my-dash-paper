@@ -15,7 +15,7 @@ import time
 from PIL import Image, ImageDraw, ImageFont
 import traceback
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.ERROR)
 class DrawPillow():
     def __init__(self, renderer):
         self.width = 480
@@ -39,12 +39,16 @@ class DrawPillow():
 
     def draw_text(self, input_text, size=24, newline_delim="\n"):
         font_size = self.font18
+        line_size = 20
         if size == 18:
-            font_size = self.font24
-        elif size == 24:
             font_size = self.font18
+            line_size = 20
+        elif size == 24:
+            font_size = self.font24
+            line_size = 26
         else:
             font_size = self.font48
+            line_size = 120
         line_no = 0
 
         if(newline_delim == "word"):
@@ -52,10 +56,18 @@ class DrawPillow():
         else:
             words = input_text.split("\n")
         
-        for word in words:
-                self.draw.text((2, line_no*size*3), word, font = font_size, fill = 0)
+        for sentense in words:
+            wrapped_sentence = self.visual_split(sentense, font_size, self.width)
+            if len(wrapped_sentence) > 1:
+                for wrd in wrapped_sentence:
+                    self.draw.text((2, line_no*line_size), wrd, font = font_size, fill = 0)
+                    line_no +=1
+            else:
+                self.draw.text((2, (line_no*line_size)), sentense, font = font_size, fill = 0)
                 line_no +=1
 
+            self.draw.text((2, (line_no*line_size)), "\n", font = font_size, fill = 0)
+            line_no +=1
         self.renderer.draw(self.Himage)
     
     def draw_image(self, name="image.png"):
@@ -128,3 +140,32 @@ class DrawPillow():
         # self.Himage2.paste(bmp, (50,10))
         # epd.display(epd.getbuffer(self.Himage2))
         # time.sleep(2)
+
+        from PIL import ImageFont
+
+    def visual_split(self, text, font, width, response_type='list'):
+        font = font
+        words = text.split()
+        
+        word_lengths = [(word, font.getsize(word)[0]) for word in words]
+        space_length = font.getsize(' ')[0]
+        
+        lines = ['']
+        line_length = 0
+        
+        for word, length in word_lengths:
+
+            if line_length+length <= width:
+                lines[-1] = '{line}{word} '.format(line=lines[-1], word=word)
+                line_length += length + space_length
+            else:
+                lines.append('{word} '.format(word=word))
+                line_length = length + space_length
+        
+        if response_type == 'list':
+            return [line.strip() for line in lines]
+        elif response_type == 'str':
+            return '\n'.join(line.strip() for line in lines)
+        else:
+            raise ValueError('Invalid response type. Valid values are "list" and "str".')
+        

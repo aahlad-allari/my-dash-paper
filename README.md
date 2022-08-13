@@ -29,6 +29,7 @@ sudo apt-get install python-imaging
 sudo pip3 install spidev
 sudo pip3 install RPi.GPIO
 sudo pip3 install Pillow
+sudo pip3 install docopt==0.6.2
 
 # Install pip on RaspberryPi
 sudo python3 -m pip install -U pip
@@ -43,4 +44,14 @@ sudo apt-get install libjasper-dev
 ```bash
 npm install -g sass
 npm install -g http-server
+```
+
+## How to use
+
+```bash
+zx test.mjs --c=web-page -url=http://google.com
+zx test.mjs --c=web-calendar
+zx test.mjs --c=py-calendar
+zx test.mjs --c=text -message="how are you"
+zx test.mjs --c=hackernews
 ```

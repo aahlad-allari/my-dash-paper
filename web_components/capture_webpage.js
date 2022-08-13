@@ -28,9 +28,14 @@ exports.generate_image = (url='https://www.aahlad.dev') => {
 
     await sleep(2000);
 
-    await page.screenshot({ path: `${path}/image.png` });
-
+    resp = await page.screenshot({ path: `${path}/image.png` });
+    
+    await sleep(2000);
+    
     await browser.close();
+
+    return resp;
+    
   })();
 
 }
