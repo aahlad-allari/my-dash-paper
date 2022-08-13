@@ -39,7 +39,7 @@ if __name__ == '__main__':
         if mode == 'text':
             text = args.get('<value>')
             if text:
-                draw.draw_text(text, 18)
+                draw.draw_text(text.replace('\\n','\n'), 18)
             else:
                 draw.draw_text("Please enter a valid text")
         elif mode == 'image':
