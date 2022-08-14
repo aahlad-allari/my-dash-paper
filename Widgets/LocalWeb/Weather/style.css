@@ -12,7 +12,7 @@
   position: relative;
 }
 html, body {
-  background-color: #5F7462;
+  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
 }
@@ -28,7 +28,7 @@ aside, main {
   font-size: 1.2rem;
 }
 .meta p, .meta a {
-  color: rgba(255, 255, 255, 0.4);
+  color: white; /* rgba(255, 255, 255, 0.4); */
 }
 .meta h1 {
   font-size: 3rem;
@@ -253,37 +253,37 @@ aside, main {
   content: "\f076";
 }
 .time-morning {
-  background-color: #e3bb88;
+  background-color: #c0c0c0;
 }
 .time-morning .sun {
-  color: #d89864;
+  color: #808080;
 }
 .time-day {
-  background-color: #d89864;
+  background-color: #808080;
 }
 .time-day .sun {
-  color: #b1695a;
+  color: #404040;
 }
 .time-day .cloud, .time-day .cloud:before, .time-day .cloud:after {
-  background-color: #644749;
+  background-color: #404040;
 }
 .time-evening {
-  background-color: #b1695a;
+  background-color: #404040;
 }
 .time-evening .sun {
-  color: #644749;
+  color: #000000;
 }
 .time-evening .cloud, .time-evening .cloud:before, .time-evening .cloud:after {
-  background-color: #e3bb88;
+  background-color: #000000;
 }
 .time-night {
-  background-color: #644749;
+  background-color: #000000;
 }
 .time-night .moon {
-  color: #e3bb88;
+  color: #FFFFFF;
 }
 .time-night .cloud, .time-night .cloud:before, .time-night .cloud:after {
-  background-color: #d89864;
+  background-color: #FFFFFF;
 }
 .weather, .icon {
   transition: all 0.7s ease-in-out;

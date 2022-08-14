@@ -39,3 +39,8 @@ widgets:
     cmd: greetings
     type: web
     schedule: random
+  
+  - name: weather
+    cmd: weather
+    type: web
+    schedule: random

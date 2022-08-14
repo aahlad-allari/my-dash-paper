@@ -30,7 +30,7 @@ const rotate_widgets = async () =>{
 
 
 
-
+// #Every 5 mins widget will get refreshed
 const wait_in_mins = 5
 const start_background_setver = async () => {
     await start.stop_static_server()

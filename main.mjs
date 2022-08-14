@@ -71,6 +71,11 @@ const start = {
         await log("Greetings....")
         start.webpage("http://127.0.0.1:3009/Widgets/LocalWeb/Greetings/greetings")
     },
+
+    weather: async () => {
+        await log("Weather....")
+        start.webpage("http://127.0.0.1:3009/Widgets/LocalWeb/Weather/")
+    },
 }
 
 export default start;
