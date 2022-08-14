@@ -39,6 +39,10 @@ switch (cmd) {
     case "dadjoke":
         await start.dadjoke()
         break;
+    
+    case "weather":
+        await start.weather()
+        break;
 
     default:
         break;

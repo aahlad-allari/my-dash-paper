@@ -83,7 +83,7 @@ aside, main {
 }
 .device header, .device footer {
   height: 40px;
-  background-color: #8ba892;
+  background-color: #FFFFFF;
 }
 .weather {
   height: 16.6666666667%;
@@ -120,7 +120,7 @@ aside, main {
 }
 .weather h3 {
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
   margin-bottom: 0;
   font-weight: 700;
 }
@@ -204,7 +204,7 @@ aside, main {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  color: #e3bb88;
+  color: #FFFFFF;
 }
 .sprinkles + .sprinkles {
   animation-delay: 0.25s;
@@ -231,7 +231,7 @@ aside, main {
   display: inline-block;
 }
 .snowflake {
-  color: #d89864;
+  color: #FFFFFF;
 }
 .snowflake:nth-child(1) {
   animation: snowflake 3.1s ease-in-out infinite;

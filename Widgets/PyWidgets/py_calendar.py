@@ -173,4 +173,4 @@ class PY_CAL():
         wi, hi = fig.get_size_inches()
         fig.set_size_inches(hi*(w/h), hi)
         plt.savefig(os.path.join(screenshot_dir, 'image.png'),format='png',
-            dpi=h/hi, bbox_inches='tight',  pad_inches=0.1)
+            dpi=h/hi, pad_inches=0.1)
