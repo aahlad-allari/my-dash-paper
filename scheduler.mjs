@@ -31,15 +31,24 @@ const rotate_widgets = async () =>{
 
 
 
+const wait_in_mins = 5
 const start_background_setver = async () => {
     await start.stop_static_server()
     await sleep(2000)
     await start.flush_logs()
     await start.start_static_server()
     await sleep(2000)
-    const wait_in_mins = 5
     setInterval(rotate_widgets, wait_in_mins * 60 * 1000);
     // rotate_widgets()
 }
 
+
+const flush_logs = async () => {
+    await $`pm2 flush my-dash-paper-daemon`
+    await log("Flushed logs for Daemon Service....")
+}
+
+
 start_background_setver()
+// Only last 5 logs will be there anytime
+setInterval(flush_logs, 5 * wait_in_mins * 60 * 1000);

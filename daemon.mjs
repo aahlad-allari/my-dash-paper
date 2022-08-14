@@ -23,18 +23,12 @@ const stop_daemon =  async () => {
     await $`pm2 delete my-dash-paper-daemon`
 }
 
-const flush_logs = async () => {
-    await $`pm2 flush my-dash-paper-daemon`
-    await log("Flushed logs for Daemon Service....")
-}
-
 const start = argv.start;
 const stop = argv.stop;
 
 if(start){
     start_daemon()
-    const wait_in_mins = 30
-    setInterval(flush_logs, wait_in_mins * 60 * 1000);
+    
 }
 
 if(stop){
