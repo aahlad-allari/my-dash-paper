@@ -6,13 +6,6 @@ widgets:
       url: https://aahlad.dev
     type: web
     schedule: morning
-
-  - name: webpage
-    cmd: webpage 
-    args:
-      url: https://github.com/aahlad-allari
-    type: web
-    schedule: morning  
   
   - name: web_calendar
     cmd: web_calendar

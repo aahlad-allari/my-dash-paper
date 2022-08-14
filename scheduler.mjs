@@ -34,7 +34,9 @@ const rotate_widgets = async () =>{
 const start_background_setver = async () => {
     await start.stop_static_server()
     await sleep(2000)
+    await start.flush_logs()
     await start.start_static_server()
+    await sleep(2000)
     const wait_in_mins = 1
     setInterval(rotate_widgets, wait_in_mins * 60 * 1000);
     // rotate_widgets()

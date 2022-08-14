@@ -23,6 +23,11 @@ const start = {
         await $`pm2 stop my-dash-paper-static`
     },
 
+    flush_logs: async () => {
+        await $`pm2 flush my-dash-paper-static`
+        await log("Flushed logs for static server....")
+    },
+
     write_to_screen: async (mode, text, fontsize=24) => {
         // await $`echo Writing image to the screen image.... ${mode} ${text} ${fontsize}`
         await $`python3 orchestrator.py ${mode} ${text} ${fontsize}`

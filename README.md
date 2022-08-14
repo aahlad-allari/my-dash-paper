@@ -46,6 +46,15 @@ npm install -g sass
 npm install -g http-server
 ```
 
+## Log rotation
+```bash
+pm2 install pm2-logrotate
+
+pm2 set pm2-logrotate:max_size 10K
+
+pm2 set pm2-logrotate:rotateInterval '*/10 * * * *'
+```
+
 ## How to use
 
 ### If you want to use cli you and use the following commands
