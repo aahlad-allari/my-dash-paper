@@ -22,3 +22,10 @@ screenshots/
 
 #Mac
 .DS_Store
+
+#VSCode
+.vscode/
+
+
+#Personal
+Widgets/LocalWeb/Calendar/bg.jpg
