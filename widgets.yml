@@ -44,3 +44,8 @@ widgets:
     cmd: weather
     type: web
     schedule: random
+  
+   - name: py_weather
+    cmd: py_weather
+    type: web
+    schedule: random

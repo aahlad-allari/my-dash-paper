@@ -17,6 +17,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 from py_components import DrawPillow
 from Widgets import hacker_news_py
 from Widgets.PyWidgets.py_calendar import PY_CAL
+from Widgets.PyWidgets.weather import WEATHER
 from Widgets.PyWidgets.dad_joke import DAD_JOKE
 
     
@@ -53,6 +54,9 @@ if __name__ == '__main__':
         elif mode == 'py_calendar':
             PY_CAL(SCRIPT_DIR).cal(grid=False, fill=True)
             draw.draw_image()
+        elif mode == 'py_weather':
+            WEATHER(SCRIPT_DIR, renderer).run()
+            # draw.draw_image()
         elif mode == 'hackernews':
             draw.draw_text(hacker_news_py.get_text(), size=24, newline_delim="\n")
         elif mode == 'dadjoke':

@@ -76,6 +76,10 @@ const start = {
         await log("Weather....")
         start.webpage("http://127.0.0.1:3009/Widgets/LocalWeb/Weather/")
     },
+
+    py_weather: async () => {
+        await start.write_to_screen("py_weather")
+    },
 }
 
 export default start;

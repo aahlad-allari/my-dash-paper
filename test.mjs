@@ -44,6 +44,10 @@ switch (cmd) {
         await start.weather()
         break;
 
+    case "py_weather":
+        await start.py_weather()
+        break;
+
     default:
         break;
 }
