@@ -16,6 +16,14 @@ switch (cmd) {
         await start.stop_static_server()
         break;
 
+    case "start_magic_mirror":
+        await start.start_magic_mirror()
+        break;
+    
+    case "stop_magic_mirror":
+        await start.stop_magic_mirror()
+        break;
+
     case "py_calendar":
         await start.py_calendar()
         break;

@@ -28,6 +28,17 @@ const start = {
         await log("Flushed logs for static server....")
     },
 
+    start_magic_mirror: async () => {
+        await log("Starting Static Server....")
+        let http_static_server = await $`which http-server`
+        await $`cd ~/Documents/proj/magicmirror/MagicMirror && pm2 start "npm run start" --name my-magic-mirror`
+    },
+
+    stop_magic_mirror: async () => {
+        await log("Stopping Static Server....")
+        await $`pm2 stop my-magic-mirror`
+    },
+
     write_to_screen: async (mode, text, fontsize=24) => {
         // await $`echo Writing image to the screen image.... ${mode} ${text} ${fontsize}`
         await $`python3 orchestrator.py ${mode} ${text} ${fontsize}`
