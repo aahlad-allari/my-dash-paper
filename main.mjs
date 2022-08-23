@@ -80,6 +80,12 @@ const start = {
     py_weather: async () => {
         await start.write_to_screen("py_weather")
     },
+    magicmirror: async () => {
+        let uname_node = await $`uname -n`
+        // Need to run magicmirror as server in the background
+        const url = (uname_node == "raspberrypi") ? "http://127.0.0.1:8080/" : "http://192.168.68.116:8080/"
+        start.webpage(url)
+    },
 }
 
 export default start;

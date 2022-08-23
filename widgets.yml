@@ -49,3 +49,8 @@ widgets:
     cmd: py_weather
     type: web
     schedule: random
+
+  - name: magicmirror
+    cmd: magicmirror
+    type: web
+    schedule: random

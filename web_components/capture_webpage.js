@@ -9,7 +9,7 @@ function sleep(ms) {
 let config = {
   headless: true,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  defaultViewport: { width: 480, height: 800, deviceScaleFactor: 1 }
+  defaultViewport: { width: 800, height: 480, deviceScaleFactor: 2 }
 }
 
 // Check if raspberrypi
@@ -26,7 +26,7 @@ exports.generate_image = (url='https://www.aahlad.dev') => {
     const path = `screenshots/`;
     fs.mkdirp(path);
 
-    await sleep(2000);
+    await sleep(8000);
 
     resp = await page.screenshot({ path: `${path}/image.png` });
     

@@ -47,6 +47,10 @@ switch (cmd) {
     case "py_weather":
         await start.py_weather()
         break;
+    
+    case "magicmirror":
+        await start.magicmirror()
+        break;
 
     default:
         break;
