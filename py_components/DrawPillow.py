@@ -12,7 +12,7 @@ if os.path.exists(libdir):
 
 import logging
 import time
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 import traceback
 
 logging.basicConfig(level=logging.ERROR)
@@ -82,8 +82,30 @@ class DrawPillow():
     
     def draw_image(self, name="image.png"):
         self.Himage = Image.open(os.path.join(screenshotsdir, name))
-        self.Himage.thumbnail(size=(480, 800), resample=Image.ANTIALIAS)
+        w = self.width
+        h = self.height
+
+        iw, ih = self.Himage
+
+        # If dimentions of image are inverted you need to convert from portrait to width
+        if iw == h:
+            w = self.height
+            h = self.width
+
+        self.Himage.thumbnail(size=(w, h), resample=Image.ANTIALIAS)
         self.renderer.draw(self.Himage.convert('1'))
+
+    def invert_image_color(self, image):
+        if image.mode == 'RGBA':
+            r,g,b,a = image.split()
+            rgb_image = Image.merge('RGB', (r,g,b))
+            inverted_image = ImageOps.invert(rgb_image)
+            r2,g2,b2 = inverted_image.split()
+            final_transparent_image = Image.merge('RGBA', (r2,g2,b2,a))
+            return final_transparent_image
+        else:
+            inverted_image = ImageOps.invert(image)
+            return inverted_image
 
     def park(self):
         pass

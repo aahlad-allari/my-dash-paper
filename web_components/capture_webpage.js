@@ -26,7 +26,7 @@ exports.generate_image = (url='https://www.aahlad.dev') => {
     const path = `screenshots/`;
     fs.mkdirp(path);
 
-    await sleep(8000);
+    await sleep(2000);
 
     resp = await page.screenshot({ path: `${path}/image.png` });
     

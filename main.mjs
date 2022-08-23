@@ -83,7 +83,7 @@ const start = {
     magicmirror: async () => {
         let uname_node = await $`uname -n`
         // Need to run magicmirror as server in the background
-        const url = (uname_node == "raspberrypi") ? "http://127.0.0.1:8080/" : "http://192.168.68.116:8080/"
+        const url = (uname_node == "raspberrypi") ? "http://0.0.0.0:8080/" : "http://192.168.68.116:8080/"
         start.webpage(url)
     },
 }
