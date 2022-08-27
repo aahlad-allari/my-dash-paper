@@ -63,6 +63,10 @@ const start = {
         start.webpage({url: "http://127.0.0.1:3009/Widgets/LocalWeb/Calendar/cal"})
     },
 
+    literature_clock: async () => {
+        start.webpage({url: "https://literature-clock.jenevoldsen.com/"})
+    },
+
     webpage: async (options) => {
         let url = options.url
         let bg = options.bg

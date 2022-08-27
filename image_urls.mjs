@@ -1,0 +1,10 @@
+const WEB_IMAGES = [
+    { "name": "avengers", "url": "https://cutewallpaper.org/24/marvel-clipart-black-and-white/77223215.jpg"},
+    { "name": "baby avengers", "url": "https://i.pinimg.com/736x/b0/9a/a6/b09aa6670c2d3dacdbd9df1968ad67f1.jpg"},
+    { "name": "superman", "url": "https://www.nicepng.com/png/detail/517-5178399_superman-20cape-20clipart-source-superhero-logo-black-and.png"},
+    { "name": "naruto", "url": "https://animesher.com/orig/0/70/706/7063/animesher.com_monochrome-black-and-white-naruto-uzumaki-706321.jpg"},
+    { "name": "powder", "bg": "BLACK", "url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/eb0cc18f-bbcb-4730-a862-54d132606dcd/deua8kl-f157ee6a-2b61-48d0-83e6-f654e7895173.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ViMGNjMThmLWJiY2ItNDczMC1hODYyLTU0ZDEzMjYwNmRjZFwvZGV1YThrbC1mMTU3ZWU2YS0yYjYxLTQ4ZDAtODNlNi1mNjU0ZTc4OTUxNzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.piqqfThDGs3QVa0yxoxThQY7TzNZWddxZha9xl041oY"},
+    { "name":"tattoo", "url": "https://as1.ftcdn.net/v2/jpg/01/52/45/86/1000_F_152458612_hvu2V03pDhDYo3ARfoiHGv5anelNdU9A.jpg"},
+    { "name": "Batman", "url": "https://i.pinimg.com/originals/19/15/c4/1915c4f52a00ebde113e50909b1cc53a.jpg"},
+    { "name": "Ironman", "bg": "BLACK", "o": "P", "url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a2663b61-9073-42b1-bba5-51c49a3a2830/d4xtl8t-af35ae89-1f5d-4d32-af31-0705b45af4a2.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyNjYzYjYxLTkwNzMtNDJiMS1iYmE1LTUxYzQ5YTNhMjgzMFwvZDR4dGw4dC1hZjM1YWU4OS0xZjVkLTRkMzItYWYzMS0wNzA1YjQ1YWY0YTIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6v3r5nt-F56lYW7WTfzUukBT6mqfT8G7LUwF0YAlCLA"},
+]

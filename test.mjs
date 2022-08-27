@@ -66,6 +66,10 @@ switch (cmd) {
     case "magicmirror":
         await start.magicmirror()
         break;
+    
+    case "literature_clock":
+        await start.literature_clock()
+        break;
 
     default:
         break;
