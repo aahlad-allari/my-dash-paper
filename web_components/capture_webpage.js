@@ -22,17 +22,15 @@ exports.generate_image = (url='https://www.aahlad.dev') => {
   (async () => {
     const browser = await puppeteer.launch(config);
     const page = await browser.newPage();
-    await page.goto(url);
+    await page.goto(url, {"waitUntil" : "networkidle0", timeout: 0});
     const path = `screenshots/`;
     fs.mkdirp(path);
 
-    await sleep(2000);
-
     resp = await page.screenshot({ path: `${path}/image.png` });
     
-    await sleep(2000);
     
     await browser.close();
+    await sleep(2000);
 
     return resp;
     

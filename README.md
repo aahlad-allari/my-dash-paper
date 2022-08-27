@@ -77,3 +77,18 @@ To Stop the daemon
 ```bash
 zx daemon.mjs --stop
 ```
+
+# MagicMirror
+Magic mirror must be installed beside this proj directory
+
+## Start Magic Mirror 
+
+```bash
+zx test.mjs --c=start_magic_mirror
+```
+
+## Stop Magic Mirror 
+
+```bash
+zx test.mjs --c=stop_magic_mirror
+```
