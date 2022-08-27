@@ -6,20 +6,24 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-let config = {
-  headless: true,
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  defaultViewport: { width: 800, height: 480, deviceScaleFactor: 2 }
-}
+exports.generate_image = (url='https://www.aahlad.dev', orientation="L") => {
 
-// Check if raspberrypi
-if (os.cpus()[0] && os.cpus()[0].model == "ARMv7 Processor rev 4 (v7l)") {
-  config["executablePath"] = '/usr/bin/chromium-browser';
-}
-
-exports.generate_image = (url='https://www.aahlad.dev') => {
+  let config = {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    defaultViewport: { width: 800, height: 480, deviceScaleFactor: 2 }
+  }
+  
+  // Check if raspberrypi
+  if (os.cpus()[0] && os.cpus()[0].model == "ARMv7 Processor rev 4 (v7l)") {
+    config["executablePath"] = '/usr/bin/chromium-browser';
+  }
 
   (async () => {
+    if(orientation == "P"){
+      config.defaultViewport.width = 480
+      config.defaultViewport.height = 800
+    }
     const browser = await puppeteer.launch(config);
     const page = await browser.newPage();
     await page.goto(url, {"waitUntil" : "networkidle0", timeout: 0});

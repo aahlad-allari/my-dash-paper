@@ -39,47 +39,61 @@ const start = {
         await $`pm2 stop my-magic-mirror`
     },
 
-    write_to_screen: async (mode, text, fontsize=24) => {
+    write_to_screen: async (options) => {
+        let mode = options.mode
+        let arg1 = options.text
+
+        let fontsize = options.fontsize
+        let bg = options.bg
+        let arg2 = fontsize
+        if(bg){
+            arg2 = bg
+        }
         // await $`echo Writing image to the screen image.... ${mode} ${text} ${fontsize}`
-        await $`python3 orchestrator.py ${mode} ${text} ${fontsize}`
+        await $`python3 orchestrator.py ${mode} ${arg1} ${arg2}`
     },
 
     default_func: async () => {
         await $`echo Capturing image....`
         generate_image()
-        await start.write_to_screen("text")
+        await start.write_to_screen({mode: "text"})
     },
 
     web_calendar: async () => {
-        start.webpage("http://127.0.0.1:3009/Widgets/LocalWeb/Calendar/cal")
+        start.webpage({url: "http://127.0.0.1:3009/Widgets/LocalWeb/Calendar/cal"})
     },
 
-    webpage: async (url = "http://google.com") => {
-        let resp = await generate_image(url)
+    webpage: async (options) => {
+        let url = options.url
+        let bg = options.bg
+        let orientation = options.orientation
+        orientation = orientation ? orientation : "L"
+        let resp = await generate_image(url, orientation)
         $`echo Generated Umage....`
         await sleep(10000);
-        await start.write_to_screen("image")
+        await start.write_to_screen({mode:"image", bg, text: "image.png"})
     },
 
     image: async (name = "image.png") => {
-        await start.write_to_screen("image", name)
+        await start.write_to_screen({mode:"image", text: name, bg})
     },
 
     py_calendar: async () => {
-        await start.write_to_screen("py_calendar")
+        await start.write_to_screen({mode:"py_calendar"})
     },
 
-    write_text: async (text, fontsize) => {
-        await start.write_to_screen("text", text, fontsize)
+    write_text: async (options) => {
+        let text, fontsize = options
+        await start.write_to_screen({mode:"text", fontsize})
     },
 
     hackernews: async (text) => {
-        await start.write_to_screen("hackernews")
+        await start.write_to_screen({mode:"hackernews"})
     },
 
     dadjoke: async () => {
         $`echo Dad Joke`
-        start.write_to_screen('dadjoke')
+        start.write_to_screen({mode:'dadjoke'})
     },
 
     greetings: async () => {
@@ -93,7 +107,7 @@ const start = {
     },
 
     py_weather: async () => {
-        await start.write_to_screen("py_weather")
+        await start.write_to_screen({mode:"py_weather"})
     },
     magicmirror: async () => {
         let uname_node = await $`uname -n`

@@ -5,7 +5,9 @@ let cmd = argv.c;
 let url = argv.url;
 let text = argv.text;
 let fontsize = argv.fontsize;
+let bg = argv.bg;
 let name = argv.name;
+let o = argv.o;
 
 
 switch (cmd) {
@@ -34,15 +36,15 @@ switch (cmd) {
         break;
 
     case "write_text":
-        await start.write_text(text, fontsize)
+        await start.write_text({text, fontsize})
         break;
 
     case "webpage":
-        await start.webpage(url)
+        await start.webpage({url: url, bg: bg, orientation: o})
         break;
 
     case "image":
-        await start.image(name)
+        await start.image({name, bg})
         break;
 
     case "hackernews":

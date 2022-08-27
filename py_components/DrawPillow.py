@@ -80,7 +80,11 @@ class DrawPillow():
             line_no +=1
         self.renderer.draw(self.Himage)
     
-    def draw_image(self, name="image.png"):
+    def draw_image(self, name="image.png", bg="WHITE"):
+        if bg == 'undefined':
+            b = "WHITE"
+        else:
+            b = bg
         if name == 'undefined':
             n = "image.png"
         else:
@@ -92,14 +96,14 @@ class DrawPillow():
         iw, ih = self.Himage.size
 
         # If dimentions of image are inverted you need to convert from portrait to width
-        if iw == h:
+        if iw < ih:
             w = self.height
             h = self.width
-            
+        
         self.Himage.thumbnail(size=(w,h), resample=Image.ANTIALIAS)
         
         # FIll transparant background with white]
-        new_image = Image.new("RGBA", self.Himage.size, "WHITE") # Create a white rgba background
+        new_image = Image.new("RGBA", (w,h), b) # Create a white rgba background
         new_image.paste(self.Himage, (0, 0), self.Himage)              # Paste the image on the background. Go to the links given below for details.
         # new_image.convert('RGB').save('test.jpg', "JPEG")  # Save as JPEG
         

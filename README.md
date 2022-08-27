@@ -59,11 +59,12 @@ pm2 set pm2-logrotate:rotateInterval '*/10 * * * *'
 
 ### If you want to use cli you and use the following commands
 ```bash
-zx test.mjs --c=webpage -url=http://google.com
+zx test.mjs --c=webpage --url=http://google.com --bg=<BLACK or WHITE> --o=<P or L>
 zx test.mjs --c=web_calendar
 zx test.mjs --c=py_calendar
 zx test.mjs --c=wite_text -message="how are you"
 zx test.mjs --c=hackernews
+zx test.mjs --c=image --name=file_name.jpg  --bg=<BLACK or WHITE> --o=<P or L>
 ```
 
 ## If you want to run daemon which rotates all the widgets in 1 min interval
