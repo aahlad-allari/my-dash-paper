@@ -5,6 +5,7 @@ let cmd = argv.c;
 let url = argv.url;
 let text = argv.text;
 let fontsize = argv.fontsize;
+let name = argv.name;
 
 
 switch (cmd) {
@@ -38,6 +39,10 @@ switch (cmd) {
 
     case "webpage":
         await start.webpage(url)
+        break;
+
+    case "image":
+        await start.image(name)
         break;
 
     case "hackernews":

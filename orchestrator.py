@@ -50,7 +50,8 @@ if __name__ == '__main__':
             else:
                 draw.draw_text("Please enter a valid text")
         elif mode == 'image':
-            draw.draw_image()
+            image_name = args.get('<value>')
+            draw.draw_image(image_name)
         elif mode == 'py_calendar':
             PY_CAL(SCRIPT_DIR).cal(grid=False, fill=True)
             draw.draw_image()

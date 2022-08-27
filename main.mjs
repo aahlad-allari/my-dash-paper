@@ -61,6 +61,10 @@ const start = {
         await start.write_to_screen("image")
     },
 
+    image: async (name = "image.png") => {
+        await start.write_to_screen("image", name)
+    },
+
     py_calendar: async () => {
         await start.write_to_screen("py_calendar")
     },

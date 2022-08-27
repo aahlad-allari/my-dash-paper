@@ -25,8 +25,8 @@ exports.generate_image = (url='https://www.aahlad.dev') => {
     await page.goto(url, {"waitUntil" : "networkidle0", timeout: 0});
     const path = `screenshots/`;
     fs.mkdirp(path);
-
-    resp = await page.screenshot({ path: `${path}/image.png` });
+    await page.evaluate(() => document.body.style.background = 'transparent');
+    resp = await page.screenshot({ path: `${path}/image.png`, omitBackground: true, });
     
     
     await browser.close();

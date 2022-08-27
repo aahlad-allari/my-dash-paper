@@ -18,8 +18,8 @@ import traceback
 logging.basicConfig(level=logging.ERROR)
 class DrawPillow():
     def __init__(self, renderer):
-        self.width = 480
-        self.height = 800
+        self.width = 800
+        self.height = 480
 
 
         self.font18 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 18)
@@ -81,19 +81,30 @@ class DrawPillow():
         self.renderer.draw(self.Himage)
     
     def draw_image(self, name="image.png"):
-        self.Himage = Image.open(os.path.join(screenshotsdir, name))
+        if name == 'undefined':
+            n = "image.png"
+        else:
+            n = name
+        self.Himage = Image.open(os.path.join(screenshotsdir, n))
         w = self.width
         h = self.height
 
-        iw, ih = self.Himage
+        iw, ih = self.Himage.size
 
         # If dimentions of image are inverted you need to convert from portrait to width
         if iw == h:
             w = self.height
             h = self.width
-
-        self.Himage.thumbnail(size=(w, h), resample=Image.ANTIALIAS)
-        self.renderer.draw(self.Himage.convert('1'))
+            
+        self.Himage.thumbnail(size=(w,h), resample=Image.ANTIALIAS)
+        
+        # FIll transparant background with white]
+        new_image = Image.new("RGBA", self.Himage.size, "WHITE") # Create a white rgba background
+        new_image.paste(self.Himage, (0, 0), self.Himage)              # Paste the image on the background. Go to the links given below for details.
+        # new_image.convert('RGB').save('test.jpg', "JPEG")  # Save as JPEG
+        
+        
+        self.renderer.draw(new_image.convert('1'))
 
     def invert_image_color(self, image):
         if image.mode == 'RGBA':
