@@ -1,4 +1,3 @@
-
 const web_images = [
     { "name": "avengers", "url": "https://cutewallpaper.org/24/marvel-clipart-black-and-white/77223215.jpg"},
     { "name": "baby avengers", "url": "https://i.pinimg.com/736x/b0/9a/a6/b09aa6670c2d3dacdbd9df1968ad67f1.jpg"},
@@ -30,6 +29,21 @@ const web_images = [
     { "name": "Quote - Stay Weird", "bg": "WHITE",  "url": "https://cdn.quotesgram.com/img/87/95/1743815760-black-and-white-quote-stay-weird-text-Favim_com-699922.jpg"},
     { "name": "Deadpool", "bg": "WHITE",  "url": "https://cafans.b-cdn.net/images/Category_98275/subcat_172994/rkZCCRvL_0602162025211.jpg"},
     { "name": "Logo", "bg": "BLACK",  "url": "https://media-exp1.licdn.com/dms/image/C5609AQGbZSjIq62LWQ/company-additional_502_282/0/1529604909910?e=2147483647&v=beta&t=SCfqKCg9TWDS-Fix2y_THpVZCm2S8E060xgWAJxoMcI"},
+    { "name": "Ganesh", "bg": "WHITE", "o": "P",  "url": "https://thumbs.dreamstime.com/b/hand-drawn-sketch-ganesh-chaturthin-hand-drawn-sketch-ganesh-chaturthi-black-white-243435013.jpg"},
+    { "name": "Ganesh", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/86/f4/7b/86f47bc37455779760b3188e84e95b0e.jpg"},
+    { "name": "Ganesh", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/736x/ca/b0/06/cab0067b6ab98617a403bb2a6283ada9.jpg"},
+    { "name": "Goddess", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/1f/af/69/1faf695f5236aff5907eba99be8016f6.jpg"},
+    { "name": "Goddess", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/564x/d9/1c/ff/d91cff43877747e7cf8d4f95eb904b59.jpg"},
+    { "name": "Pattern", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/564x/8a/94/f0/8a94f038fcd3dc3a9154879bf986ff7a.jpg"},
+    { "name": "Goddess Kali", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/81/6a/32/816a32255ee480b2b94b92453a8ef006.jpg"},
+    { "name": "Shiva Thandav", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/da/54/e6/da54e674370ca3afcc5b615060efb0ef.jpg"},
+    { "name": "Shiva Bhola Shankar", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/86/a7/68/86a76895375753a77fbcb6f5eb0caba1.jpg"},
+    { "name": "Shiva Sketch", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/564x/b4/5e/bf/b45ebfd6573b9e36dd162fc45f746e90.jpg"},
+    { "name": "Face", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/55/0a/1c/550a1ce1e3c7886137041d34817958a0.jpg"},
+    { "name": "Goutham Buddha", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/2f/bc/b3/2fbcb3e975085ea77de8f9fdfca36438.jpg"},
+    { "name": "Goutham Buddha", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/49/f9/e6/49f9e664ae1e257f917f6a8b98b1f544.jpg"},
+    { "name": "Goutham Buddha", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/0f/56/e0/0f56e04827670500b128e66db68795ac.jpg"},
+    { "name": "Pattern", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/91/82/d2/9182d2397f77cb40be3a2ee91bc37cc7.jpg"},
 ]
 
 export default web_images;
