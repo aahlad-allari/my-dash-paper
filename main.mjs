@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 import {$} from 'zx'
+import * as R from 'ramda';
+
 import {generate_image} from "./web_components/capture_webpage.js"
+import web_images  from "./image_urls.mjs"
 // $.verbose = false
 const log = async (txt) =>{
     await $`echo ${txt}`
@@ -67,10 +70,34 @@ const start = {
         start.webpage({url: "https://literature-clock.jenevoldsen.com/"})
     },
 
+    web_col: async (options) => {
+        let index = options.index ? options.index : web_images.length-1
+        let o = options.o
+
+        let filter = n => true
+        let filtered_list = web_images
+        if(index == "r"){
+            if(o == 'p' || o == 'P'){
+                filter = n => (n.o === 'p' || n.o === 'P');
+            } else if((o == 'l')){
+                filter = n => (n.o !== 'p' && n.o !== 'P');
+            }
+
+            filtered_list = R.filter(filter, web_images)
+            index = Math.floor(Math.random() * filtered_list.length)
+        }
+
+
+        console.log("Index...", index)
+        const c_image = filtered_list[index]
+        console.log(index)
+        start.webpage(c_image)
+    },
+
     webpage: async (options) => {
         let url = options.url
         let bg = options.bg
-        let orientation = options.orientation
+        let orientation = options.o
         orientation = orientation ? orientation : "L"
         let resp = await generate_image(url, orientation)
         $`echo Generated Umage....`
@@ -78,7 +105,7 @@ const start = {
         await start.write_to_screen({mode:"image", bg, text: "image.png"})
     },
 
-    image: async (name = "image.png") => {
+    image: async (options) => {
         await start.write_to_screen({mode:"image", text: name, bg})
     },
 

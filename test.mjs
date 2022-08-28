@@ -8,6 +8,7 @@ let fontsize = argv.fontsize;
 let bg = argv.bg;
 let name = argv.name;
 let o = argv.o;
+let index = argv.index;
 
 
 switch (cmd) {
@@ -40,11 +41,15 @@ switch (cmd) {
         break;
 
     case "webpage":
-        await start.webpage({url: url, bg: bg, orientation: o})
+        await start.webpage({url: url, bg: bg, o: o})
         break;
 
     case "image":
         await start.image({name, bg})
+        break;
+    
+    case "web_col":
+        await start.web_col({index, o})
         break;
 
     case "hackernews":

@@ -65,6 +65,7 @@ zx test.mjs --c=py_calendar
 zx test.mjs --c=wite_text -message="how are you"
 zx test.mjs --c=hackernews
 zx test.mjs --c=image --name=file_name.jpg  --bg=<BLACK or WHITE> --o=<P or L>
+zx test.mjs --c=web_col --index=r --o=l
 ```
 
 ## If you want to run daemon which rotates all the widgets in 1 min interval

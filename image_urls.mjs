@@ -1,10 +1,35 @@
-const WEB_IMAGES = [
+
+const web_images = [
     { "name": "avengers", "url": "https://cutewallpaper.org/24/marvel-clipart-black-and-white/77223215.jpg"},
     { "name": "baby avengers", "url": "https://i.pinimg.com/736x/b0/9a/a6/b09aa6670c2d3dacdbd9df1968ad67f1.jpg"},
     { "name": "superman", "url": "https://www.nicepng.com/png/detail/517-5178399_superman-20cape-20clipart-source-superhero-logo-black-and.png"},
     { "name": "naruto", "url": "https://animesher.com/orig/0/70/706/7063/animesher.com_monochrome-black-and-white-naruto-uzumaki-706321.jpg"},
-    { "name": "powder", "bg": "BLACK", "url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/eb0cc18f-bbcb-4730-a862-54d132606dcd/deua8kl-f157ee6a-2b61-48d0-83e6-f654e7895173.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ViMGNjMThmLWJiY2ItNDczMC1hODYyLTU0ZDEzMjYwNmRjZFwvZGV1YThrbC1mMTU3ZWU2YS0yYjYxLTQ4ZDAtODNlNi1mNjU0ZTc4OTUxNzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.piqqfThDGs3QVa0yxoxThQY7TzNZWddxZha9xl041oY"},
+    { "name": "powder", "bg": "BLACK", "o": "P", "url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/eb0cc18f-bbcb-4730-a862-54d132606dcd/deua8kl-f157ee6a-2b61-48d0-83e6-f654e7895173.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ViMGNjMThmLWJiY2ItNDczMC1hODYyLTU0ZDEzMjYwNmRjZFwvZGV1YThrbC1mMTU3ZWU2YS0yYjYxLTQ4ZDAtODNlNi1mNjU0ZTc4OTUxNzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.piqqfThDGs3QVa0yxoxThQY7TzNZWddxZha9xl041oY"},
     { "name":"tattoo", "url": "https://as1.ftcdn.net/v2/jpg/01/52/45/86/1000_F_152458612_hvu2V03pDhDYo3ARfoiHGv5anelNdU9A.jpg"},
     { "name": "Batman", "url": "https://i.pinimg.com/originals/19/15/c4/1915c4f52a00ebde113e50909b1cc53a.jpg"},
     { "name": "Ironman", "bg": "BLACK", "o": "P", "url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a2663b61-9073-42b1-bba5-51c49a3a2830/d4xtl8t-af35ae89-1f5d-4d32-af31-0705b45af4a2.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyNjYzYjYxLTkwNzMtNDJiMS1iYmE1LTUxYzQ5YTNhMjgzMFwvZDR4dGw4dC1hZjM1YWU4OS0xZjVkLTRkMzItYWYzMS0wNzA1YjQ1YWY0YTIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6v3r5nt-F56lYW7WTfzUukBT6mqfT8G7LUwF0YAlCLA"},
+    { "name": "Thor", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/7c/31/0f/7c310ffbe2f2be8a0b1801347f0d0852.jpg"},
+    { "name": "Thor drawing", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/736x/59/df/58/59df58560e4a1f895ff014bd35d7e7d8.jpg"},
+    { "name": "Thor face", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/d9/a1/05/d9a105d396b27f93dada58e71b286d0f.jpg"},
+    { "name": "Thor face", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/1200x/2f/07/86/2f07865dc858833fa91b7de7478029be.jpg"},
+    { "name": "Joker&Batman", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/f6/7a/51/f67a517249085ff4b23be232039d6ce8.jpg"},
+    { "name": "Sherlock", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/10/e2/78/10e278f874d45fd4d1fe6f93b9930a8a.jpg"},
+    { "name": "Sherlock", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/564x/97/db/66/97db667058e9df4de3adc066459cfd7a.jpg"},
+    { "name": "Building Art", "bg": "WHITE", "url": "https://www.wanderarti.com/wp-content/uploads/2014/03/krakow-and-praha.png"},
+    { "name": "Building Art Portrait", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/51/07/28/510728f6d341342ca3d7407882bc3fa6.jpg"},
+    { "name": "Building Art Portrait", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/35/b4/ec/35b4ece41095454f53cae12db7e853ad.jpg"},
+    { "name": "Ghibli", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/c8/64/ac/c864ac50968fd4a3a3980473777f551c.jpg"},
+    { "name": "Ghibli", "bg": "WHITE", "o": "P", "url": "https://2.bp.blogspot.com/-hBrdLkhlMbA/Whzq2y-5RoI/AAAAAAAAK2Q/u6QBerb6uBwT4pdF95bGPHetNS_3AB63QCLcBGAs/s1600/5aalb6ceeh001.jpg"},
+    { "name": "Ghibli", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/e3/32/61/e33261ba146d595efeee73b82a7333fb.jpg"},
+    { "name": "Quote - Hayao Miyazaki", "bg": "BLACK",  "url": "https://studioghiblimovies.com/wp-content/uploads/2018/12/0.jpg"},
+    { "name": "Quote - Tesla", "bg": "BLACK",  "url": "https://vegaslide.com/wp-content/uploads/2018/11/Slide1-1-700x525.png"},
+    { "name": "Quote - Tesla", "bg": "WHITE",  "url": "https://vegaslide.com/wp-content/uploads/2018/11/Slide2-1-700x525.png"},
+    { "name": "Quote - Einstein", "bg": "BLACK",  "url": "https://cdn.quotesgram.com/img/47/29/473856607-black_quotes_harmony_simple_opportunity_einstein_albert_1366x768_62590.jpg"},
+    { "name": "Quote - Edison", "bg": "BLACK",  "url": "https://i.pinimg.com/originals/60/0d/5b/600d5b237be0ccba0dc437a106bc6e9b.jpg"},
+    { "name": "Quote - Steve Jobs", "bg": "BLACK",  "url": "https://www.adzuna.ca/blog/wp-content/uploads/2015/10/steve-jobs-3.jpg"},
+    { "name": "Quote - Stay Weird", "bg": "WHITE",  "url": "https://cdn.quotesgram.com/img/87/95/1743815760-black-and-white-quote-stay-weird-text-Favim_com-699922.jpg"},
+    { "name": "Deadpool", "bg": "WHITE",  "url": "https://cafans.b-cdn.net/images/Category_98275/subcat_172994/rkZCCRvL_0602162025211.jpg"},
+    { "name": "Logo", "bg": "BLACK",  "url": "https://media-exp1.licdn.com/dms/image/C5609AQGbZSjIq62LWQ/company-additional_502_282/0/1529604909910?e=2147483647&v=beta&t=SCfqKCg9TWDS-Fix2y_THpVZCm2S8E060xgWAJxoMcI"},
 ]
+
+export default web_images;
