@@ -100,14 +100,14 @@ const start = {
 
     webpage: async (options) => {
         let url = options.url
-        let name = oprions.name
+        let name = options.name
         let bg = options.bg
         let orientation = options.o
         orientation = orientation ? orientation : "L"
         let resp = await generate_image(url, name, orientation)
         $`echo Generated Umage....`
         await sleep(10000);
-        await start.write_to_screen({mode:"image", bg, text: "image.png"})
+        await start.write_to_screen({mode:"image", bg, text: name+".png"})
     },
 
     image: async (options) => {

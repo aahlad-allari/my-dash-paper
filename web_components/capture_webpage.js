@@ -25,13 +25,15 @@ exports.generate_image = (url='https://www.aahlad.dev', name="image", orientatio
       config.defaultViewport.height = 800
     }
     resp = null;
+    const path = `screenshots/`;
     if (fs.existsSync(`${path}/${name}.png`)) {
+      console.log("Using Downloaded Image", name);
       resp = fs.readFileSync(`${path}/${name}.png`);
     }else{
+      console.log("Downloading Image from Internet", name)
       const browser = await puppeteer.launch(config);
       const page = await browser.newPage();
       await page.goto(url, {"waitUntil" : "networkidle0", timeout: 0});
-      const path = `screenshots/`;
       fs.mkdirp(path);
       await page.evaluate(() => document.body.style.background = 'transparent');
       resp = await page.screenshot({ path: `${path}/${name}.png`, omitBackground: true, });
