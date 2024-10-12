@@ -49,7 +49,8 @@ class DrawPillow():
             self.height = 800
             self.Himage = Image.new('1', (self.width, self.height), 255)
             self.draw = ImageDraw.Draw(self.Himage)
-            self.Himage = self.Himage.rotate(90, expand=1)
+            # self.Himage = self.Himage.rotate(-90, expand=1)
+            pass
         else:
             self.width = 800
             self.height = 480
