@@ -53,6 +53,19 @@ const web_images = [
     {"name": "God Father", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/54/ee/76/54ee764aecc6f39d3fa786afea765f5c.jpg"},
     {"name": "Quote - Home", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/enabled/564x/0b/c8/1a/0bc81ac3658fb39908ebbc1e10b6eae1.jpg"},
     {"name": "Quote - 1", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/enabled/564x/8a/a7/17/8aa7179eaac0328c339d5c437cb33fb5.jpg"},
+    {"name": "Quote - Do it", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/f5/29/ea/f529ea4f31144980d6d7d1b362661b4c.jpg"},
+    {"name": "Quote - 3", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/fa/db/3f/fadb3fe4456601cdd0f6ce4cd25814b3.png"},
+    {"name": "Quote - 4", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/f9/ae/5e/f9ae5e52c14c0d19fe9eb0b9cc9431f8.jpg"},
+    {"name": "Quote - Results Come", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/a3/a0/be/a3a0be415ce5dd01076d91c3ac25dd9d.jpg"},
+    {"name": "Quote - Life is short", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/c3/da/6d/c3da6d8ad95219610c503e1fc1b35ce5.jpg"},
+    {"name": "Quote - If you can dream", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/56/36/e6/5636e6596b798de36c2af33e32bf7b8b.jpg"},
+    {"name": "Quote - Dispiline", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/5c/a8/f2/5ca8f24a03017c63f8f7b439fa6e9950.jpg"},
+    {"name": "Quote - Coding", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/enabled/564x/1f/ae/65/1fae65f1f8a4d5818ccd3df03f8105d1.jpg"},
+    {"name": "Quote - You are offline", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/99/c7/c6/99c7c652c5a8ce39055546eee7134cfb.jpg"},
+    {"name": "Woman face", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/d9/7d/89/d97d896313de5f9c60e914c7638a42a2.jpg"},
+    {"name": "Woman face 1", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/06/f1/05/06f1057ae8e405c3d7acc2d4e7b07a5f.jpg"},
+    {"name": "Woman face 2", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/c1/df/6c/c1df6c853b8f93f32615f38217f30822.jpg"},
+    {"name": "Woman face 3", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/c1/ba/54/c1ba5427a792381b1fc7b5a78654bfb6.jpg"},
 ]
 
 export default web_images;
