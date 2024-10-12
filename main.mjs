@@ -52,7 +52,7 @@ const start = {
         if(bg){
             arg2 = bg
         }
-        // await $`echo Writing image to the screen image.... ${mode} ${text} ${fontsize}`
+        await $`echo Writing image to the screen image.... ${mode} ${arg1} ${arg2}`
         await $`python3 orchestrator.py ${mode} ${arg1} ${arg2}`
     },
 
@@ -115,7 +115,7 @@ const start = {
 
     write_text: async (options) => {
         let text, fontsize = options
-        await start.write_to_screen({mode:"text", text, fontsize})
+        await start.write_to_screen({mode:"text", text: text, fontsize: fontsize})
     },
 
     hackernews: async (text) => {
