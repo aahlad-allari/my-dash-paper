@@ -43,7 +43,6 @@ if __name__ == '__main__':
             fontsize = args.get('<value1>')
             if fontsize:
                 fontsize = int(fontsize)
-                fontsize = 24
             else:
                 fontsize = 24
             if text:
