@@ -41,7 +41,7 @@ if __name__ == '__main__':
         if mode == 'text':
             text = args.get('<value>')
             fontsize = args.get('<value1>')
-            if fontsize:
+            if fontsize or fontsize != "undefined":
                 fontsize = int(fontsize)
             else:
                 fontsize = 24
