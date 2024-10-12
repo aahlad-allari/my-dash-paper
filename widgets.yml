@@ -21,7 +21,8 @@ widgets:
     cmd: write_text
     args:
        message: You can do it!!
-       fontsize: 120
+       font_size: 120
+       o: p
     type: web
     schedule: morning
   
@@ -45,7 +46,7 @@ widgets:
     type: web
     schedule: random
   
-   - name: py_weather
+  - name: py_weather
     cmd: py_weather
     type: web
     schedule: random
