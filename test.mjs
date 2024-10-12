@@ -45,7 +45,7 @@ switch (cmd) {
         break;
 
     case "image":
-        await start.image({text, bg})
+        await start.image({img_name, bg})
         break;
     
     case "web_col":
