@@ -90,7 +90,7 @@ const start = {
 
         console.log("Index...", index)
         const c_image = filtered_list[index]
-        console.log(index)
+        console.log(c_image)
         start.webpage(c_image)
     },
 
