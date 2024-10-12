@@ -45,6 +45,11 @@ const web_images = [
     { "name": "Goutham Buddha", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/0f/56/e0/0f56e04827670500b128e66db68795ac.jpg"},
     { "name": "Pattern", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/91/82/d2/9182d2397f77cb40be3a2ee91bc37cc7.jpg"},
     {"name": "Dad Daughter", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/28/f9/cc/28f9cc1982a720f5e670ed4a1e4f0b2e.jpg"},
+    {"name": "Cute Gitl Red", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/ed/a2/bd/eda2bdac28f1a214732aa2ba6a2f833c.jpg"},
+    {"name": "Dad Girl", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/ed/f4/a5/edf4a50f3ae441d5351b49debbc6f183.jpg"},
+    {"name": "Mom n Girl", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/736x/1d/0a/96/1d0a96bbafaf9b32a767f8fb459010fe.jpg"},
+    {"name": "Cute Gitl ", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/18/40/b3/1840b3a00c668807daf4e7112812cb75.jpg"},
+    {"name": "Cute Gitl 2", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/e7/ec/af/e7ecaf00261750cd284e519f3367ec3f.webp"},
 ]
 
 export default web_images;
