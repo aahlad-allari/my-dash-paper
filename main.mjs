@@ -52,6 +52,7 @@ const start = {
         if(bg){
             arg2 = bg
         }
+        console.log(options)
         await $`echo Writing image to the screen image.... ${mode} ${arg1} ${arg2}`
         await $`python3 orchestrator.py ${mode} ${arg1} ${arg2}`
     },
