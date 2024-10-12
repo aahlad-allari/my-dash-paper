@@ -24,18 +24,20 @@ exports.generate_image = (url='https://www.aahlad.dev', name="image", orientatio
       config.defaultViewport.width = 480
       config.defaultViewport.height = 800
     }
-    const browser = await puppeteer.launch(config);
-    const page = await browser.newPage();
-    await page.goto(url, {"waitUntil" : "networkidle0", timeout: 0});
-    const path = `screenshots/`;
-    fs.mkdirp(path);
-    await page.evaluate(() => document.body.style.background = 'transparent');
-    resp = await page.screenshot({ path: `${path}/${name}.png`, omitBackground: true, });
-    
-    
-    await browser.close();
-    await sleep(2000);
-
+    resp = null;
+    if (fs.existsSync(`${path}/${name}.png`)) {
+      resp = fs.readFileSync(`${path}/${name}.png`);
+    }else{
+      const browser = await puppeteer.launch(config);
+      const page = await browser.newPage();
+      await page.goto(url, {"waitUntil" : "networkidle0", timeout: 0});
+      const path = `screenshots/`;
+      fs.mkdirp(path);
+      await page.evaluate(() => document.body.style.background = 'transparent');
+      resp = await page.screenshot({ path: `${path}/${name}.png`, omitBackground: true, });
+      await browser.close();
+      await sleep(2000);
+    }
     return resp;
     
   })();
