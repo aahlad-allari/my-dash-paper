@@ -44,7 +44,8 @@ if __name__ == '__main__':
             if fontsize:
                 print("fontsize")
                 print(args)
-                fontsize = int(fontsize)
+                # fontsize = int(fontsize)
+                fontsize = 24
             else:
                 fontsize = 24
             if text:
