@@ -53,7 +53,7 @@ const start = {
             arg2 = bg
         }
         await $`echo Writing image to the screen image.... ${mode} ${arg1} ${arg2}`
-        await $`python3 orchestrator.py ${mode} ${arg1} ${arg2}`
+        await $`python3 orchestrator.py --mode=${mode} --text${arg1} --fontsize${arg2}`
     },
 
     default_func: async () => {
