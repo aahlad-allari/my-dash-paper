@@ -6,7 +6,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-exports.generate_image = (url='https://www.aahlad.dev', orientation="L") => {
+exports.generate_image = (url='https://www.aahlad.dev', name="image", orientation="L") => {
 
   let config = {
     headless: true,
@@ -30,7 +30,7 @@ exports.generate_image = (url='https://www.aahlad.dev', orientation="L") => {
     const path = `screenshots/`;
     fs.mkdirp(path);
     await page.evaluate(() => document.body.style.background = 'transparent');
-    resp = await page.screenshot({ path: `${path}/image.png`, omitBackground: true, });
+    resp = await page.screenshot({ path: `${path}/${name}.png`, omitBackground: true, });
     
     
     await browser.close();
