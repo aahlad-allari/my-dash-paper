@@ -6,7 +6,7 @@ let url = argv.url;
 let text = argv.text;
 let fontsize = argv.fontsize;
 let bg = argv.bg;
-let name = argv.name;
+let img_name = argv.img_name;
 let o = argv.o;
 let index = argv.index;
 
