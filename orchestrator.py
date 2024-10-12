@@ -3,7 +3,7 @@ usage = '''
 EPaper Python Orchestrator..
 
 Usage:
-  orchestrator.py <mode> [<value> <value1>]
+  orchestrator.py <mode> [<value> <value1> <value2>]
 '''
 
 from docopt import docopt
