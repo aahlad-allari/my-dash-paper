@@ -115,7 +115,7 @@ const start = {
     },
 
     write_text: async (options) => {
-        await start.write_to_screen({mode:"text", text: options.text, fontsize: options.fontsize})
+        await start.write_to_screen({mode:"text", text: options.text, fontsize: options.fontsize, orientation: options.orientation})
     },
 
     hackernews: async (text) => {

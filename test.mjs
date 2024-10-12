@@ -37,7 +37,7 @@ switch (cmd) {
         break;
 
     case "write_text":
-        await start.write_text({text, fontsize})
+        await start.write_text({text, fontsize, orientation: o})    
         break;
 
     case "webpage":

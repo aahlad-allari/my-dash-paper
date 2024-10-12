@@ -41,13 +41,15 @@ if __name__ == '__main__':
         if mode == 'text':
             text = args.get('<value>')
             fontsize = args.get('<value1>')
+            orientation = args.get('<value2>')
+            orientation = orientation if orientation else "L"
             # allow if fontsize is a number
             if fontsize and fontsize.isdigit():
                 fontsize = int(fontsize)
             else:
                 fontsize = 24
             if text:
-                draw.draw_text(text.replace('\\n','\n'), fontsize)
+                draw.draw_text(text.replace('\\n','\n'), fontsize, orientation)
             else:
                 draw.draw_text("Please enter a valid text")
         elif mode == 'image':

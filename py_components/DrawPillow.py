@@ -42,7 +42,21 @@ class DrawPillow():
     def get_fonts(self,size=18, style='Font.ttc'):
         return ImageFont.truetype(os.path.join(assets, style), size)
 
-    def draw_text(self, input_text, size=24, newline_delim="\n"):
+    def draw_text(self, input_text, size=24, orientation="L", newline_delim="\n"):
+        # based on orientation render text rotate 90 degrees
+        if orientation == "P":
+            self.width = 480
+            self.height = 800
+            self.Himage = Image.new('1', (self.width, self.height), 255)
+            self.draw = ImageDraw.Draw(self.Himage)
+            self.Himage = self.Himage.rotate(90, expand=1)
+        else:
+            self.width = 800
+            self.height = 480
+            self.Himage = Image.new('1', (self.width, self.height), 255)
+            self.draw = ImageDraw.Draw(self.Himage)
+
+
         font_size = self.get_fonts(18)
         line_size = 20
         if size == 18:
