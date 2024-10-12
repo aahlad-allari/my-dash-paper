@@ -50,6 +50,7 @@ const web_images = [
     {"name": "Mom n Girl", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/736x/1d/0a/96/1d0a96bbafaf9b32a767f8fb459010fe.jpg"},
     {"name": "Cute Gitl ", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/18/40/b3/1840b3a00c668807daf4e7112812cb75.jpg"},
     {"name": "Cute Gitl 2", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/e7/ec/af/e7ecaf00261750cd284e519f3367ec3f.webp"},
+    {"name": "God Father", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/54/ee/76/54ee764aecc6f39d3fa786afea765f5c.jpg"},
 ]
 
 export default web_images;
