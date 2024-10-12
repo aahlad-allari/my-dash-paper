@@ -42,9 +42,7 @@ if __name__ == '__main__':
             text = args.get('<value>')
             fontsize = args.get('<value1>')
             if fontsize:
-                print("fontsize")
-                print(args)
-                # fontsize = int(fontsize)
+                fontsize = int(fontsize)
                 fontsize = 24
             else:
                 fontsize = 24
