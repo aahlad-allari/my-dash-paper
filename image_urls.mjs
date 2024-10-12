@@ -44,6 +44,7 @@ const web_images = [
     { "name": "Goutham Buddha", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/49/f9/e6/49f9e664ae1e257f917f6a8b98b1f544.jpg"},
     { "name": "Goutham Buddha", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/0f/56/e0/0f56e04827670500b128e66db68795ac.jpg"},
     { "name": "Pattern", "bg": "WHITE", "o": "P",  "url": "https://i.pinimg.com/originals/91/82/d2/9182d2397f77cb40be3a2ee91bc37cc7.jpg"},
+    {"name": "Dad Daughter", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/28/f9/cc/28f9cc1982a720f5e670ed4a1e4f0b2e.jpg"},
 ]
 
 export default web_images;
