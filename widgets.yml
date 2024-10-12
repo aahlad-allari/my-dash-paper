@@ -1,57 +1,65 @@
 widgets:
   
-  - name: webpage
-    cmd: webpage 
-    args:
-      url: https://aahlad.dev
-    type: web
-    schedule: morning
+  # - name: webpage
+  #   cmd: webpage 
+  #   args:
+  #     url: https://aahlad.dev
+  #   type: web
+  #   schedule: morning
   
-  - name: web_calendar
-    cmd: web_calendar
-    type: web
-    schedule: morning
+  # - name: web_calendar
+  #   cmd: web_calendar
+  #   type: web
+  #   schedule: morning
   
-  - name: py_calendar
-    cmd: py_calendar
-    type: py
-    schedule: morning
+  # - name: py_calendar
+  #   cmd: py_calendar
+  #   type: py
+  #   schedule: morning
   
-  - name: Wishes
-    cmd: write_text
-    args:
-       message: You can do it!!
-       font_size: 120
-       o: p
-    type: web
-    schedule: morning
+  # - name: Wishes
+  #   cmd: write_text
+  #   args:
+  #      message: You can do it!!
+  #      font_size: 72
+  #      font_style: RobotoMono-Bold.ttf
+  #      o: p
+  #   type: web
+  #   schedule: morning
   
-  - name: hackernews
-    cmd: hackernews
-    type: web
-    schedule: morning
+  # - name: hackernews
+  #   cmd: hackernews
+  #   type: web
+  #   schedule: morning
   
-  - name: dadjoke
-    cmd: dadjoke
-    type: web
-    schedule: random
+  # - name: dadjoke
+  #   cmd: dadjoke
+  #   type: web
+  #   schedule: random
   
-  - name: greetings
-    cmd: greetings
-    type: web
-    schedule: random
+  # - name: greetings
+  #   cmd: greetings
+  #   type: web
+  #   schedule: random
   
-  - name: weather
-    cmd: weather
-    type: web
-    schedule: random
+  # - name: weather
+  #   cmd: weather
+  #   type: web
+  #   schedule: random
   
-  - name: py_weather
-    cmd: py_weather
-    type: web
-    schedule: random
+  # - name: py_weather
+  #   cmd: py_weather
+  #   type: web
+  #   schedule: random
 
-  - name: magicmirror
-    cmd: magicmirror
+  # - name: magicmirror
+  #   cmd: magicmirror
+  #   type: web
+  #   schedule: random
+
+  - name: Rotate Images
+    cmd: web_col
+    args:
+       index: r
     type: web
     schedule: random

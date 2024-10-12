@@ -60,7 +60,6 @@ const web_images = [
     {"name": "Quote - Life is short", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/c3/da/6d/c3da6d8ad95219610c503e1fc1b35ce5.jpg"},
     {"name": "Quote - If you can dream", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/56/36/e6/5636e6596b798de36c2af33e32bf7b8b.jpg"},
     {"name": "Quote - Dispiline", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/5c/a8/f2/5ca8f24a03017c63f8f7b439fa6e9950.jpg"},
-    {"name": "Quote - Coding", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/enabled/564x/1f/ae/65/1fae65f1f8a4d5818ccd3df03f8105d1.jpg"},
     {"name": "Quote - You are offline", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/99/c7/c6/99c7c652c5a8ce39055546eee7134cfb.jpg"},
     {"name": "Woman face", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/d9/7d/89/d97d896313de5f9c60e914c7638a42a2.jpg"},
     {"name": "Woman face 1", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/06/f1/05/06f1057ae8e405c3d7acc2d4e7b07a5f.jpg"},
