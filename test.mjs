@@ -4,11 +4,12 @@ import start from './main.mjs';
 let cmd = argv.c;
 let url = argv.url;
 let text = argv.text;
-let fontsize = argv.fontsize;
+let font_size = argv.font_size;
 let bg = argv.bg;
 let img_name = argv.img_name;
 let o = argv.o;
 let index = argv.index;
+let font_style = argv.font_style
 
 
 switch (cmd) {
@@ -37,7 +38,7 @@ switch (cmd) {
         break;
 
     case "write_text":
-        await start.write_text({text, fontsize, orientation: o})    
+        await start.write_text({text, font_size, orientation: o, font_style: font_style})    
         break;
 
     case "webpage":

@@ -47,16 +47,17 @@ const start = {
         let arg1 = options.text
         
 
-        let fontsize = options.fontsize
+        let font_size = options.font_size
         let bg = options.bg
-        let arg2 = fontsize
+        let arg2 = font_size
         if(bg){
             arg2 = bg
         }
         let arg3 = options.orientation
+        let arg4 = options.font_style
         console.log(options)
-        await $`echo Writing image to the screen image.... ${mode} ${arg1} ${arg2} ${arg3}`
-        await $`python3 orchestrator.py ${mode} ${arg1} ${arg2} ${arg3}`
+        await $`echo Writing image to the screen image.... ${mode} ${arg1} ${arg2} ${arg3} ${arg4}`
+        await $`python3 orchestrator.py ${mode} ${arg1} ${arg2} ${arg3} ${arg4}`
     },
 
     default_func: async () => {
@@ -117,7 +118,7 @@ const start = {
     },
 
     write_text: async (options) => {
-        await start.write_to_screen({mode:"text", text: options.text, fontsize: options.fontsize, orientation: options.orientation})
+        await start.write_to_screen({mode:"text", text: options.text, font_size: options.font_size, orientation: options.orientation, font_style: options.font_style})
     },
 
     hackernews: async (text) => {

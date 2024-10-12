@@ -22,10 +22,10 @@ class DrawPillow():
         self.height = 480
 
 
-        self.font18 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 18)
-        self.font24 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 24)
-        self.font48 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 48)
-        self.font72 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 72)
+        # self.font18 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 18)
+        # self.font24 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 24)
+        # self.font48 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 48)
+        # self.font72 = ImageFont.truetype(os.path.join(assets, 'Font.ttc'), 72)
 
         self.renderer = renderer()
 
@@ -39,41 +39,43 @@ class DrawPillow():
     def draw_circle():
         pass
 
-    def get_fonts(self,size=18, style='Font.ttc'):
-        return ImageFont.truetype(os.path.join(assets, style), size)
+    def get_fonts(self,size=18, style='Roboto-Regular'):
+        font_path = os.path.join(assets, style)
+        print(font_path)
+        return ImageFont.truetype(font_path, size)
 
-    def draw_text(self, input_text, size=24, orientation="L", newline_delim="\n"):
+    def draw_text(self, input_text, size=24, orientation="L", font_style='Roboto-Regular', newline_delim="\n"):
         # based on orientation render text rotate 90 degrees
         if orientation == "P" or orientation == "p":
             self.width = 480
             self.height = 800
             self.Himage = Image.new('1', (self.width, self.height), 255)
             self.draw = ImageDraw.Draw(self.Himage)
-            # self.Himage = self.Himage.rotate(-90, expand=1)
-            pass
         else:
             self.width = 800
             self.height = 480
             self.Himage = Image.new('1', (self.width, self.height), 255)
             self.draw = ImageDraw.Draw(self.Himage)
 
+        if not font_style:
+            font_style = 'Roboto-Regular'
 
-        font_size = self.get_fonts(18)
+        font_size = self.get_fonts(18,style=font_style)
         line_size = 20
         if size == 18:
-            font_size = self.get_fonts(18)
+            font_size = self.get_fonts(18,style=font_style)
             line_size = 20
         elif size == 24:
-            font_size = self.get_fonts(24)
+            font_size = self.get_fonts(24,style=font_style)
             line_size = 26
         elif size == 48:
-            font_size = self.get_fonts(48)
+            font_size = self.get_fonts(48,style=font_style)
             line_size = 50
         elif size == 72:
-            font_size = self.get_fonts(72)
+            font_size = self.get_fonts(72,style=font_style)
             line_size = 74
         else:
-            font_size = self.get_fonts(120)
+            font_size = self.get_fonts(120,style=font_style)
             line_size = 122
         line_no = 0
         if(newline_delim == "word"):
@@ -166,7 +168,7 @@ class DrawPillow():
         # width = 0
         # for j in [5,6,7]:
         #     for i in range(10):
-        #         print(f'{j} X {i+1} = {j*(i+1)}')
+        #         f(f'{j} X {i+1} = {j*(i+1)}')
         #         draw.text((140*width, 25*i), f'{j} X {i+1} = {j*(i+1)}', font = font24, fill = 0)
         #     width+=1
         # draw.text((2, 20), '7.5inch epd', font = font18, fill = 0)
