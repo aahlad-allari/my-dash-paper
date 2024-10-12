@@ -52,6 +52,7 @@ const web_images = [
     {"name": "Cute Gitl 2", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/originals/e7/ec/af/e7ecaf00261750cd284e519f3367ec3f.webp"},
     {"name": "God Father", "bg": "BLACK", "o": "P", "url": "https://i.pinimg.com/originals/54/ee/76/54ee764aecc6f39d3fa786afea765f5c.jpg"},
     {"name": "Quote - Home", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/enabled/564x/0b/c8/1a/0bc81ac3658fb39908ebbc1e10b6eae1.jpg"},
+    {"name": "Quote - 1", "bg": "WHITE", "o": "P", "url": "https://i.pinimg.com/enabled/564x/8a/a7/17/8aa7179eaac0328c339d5c437cb33fb5.jpg"},
 ]
 
 export default web_images;
