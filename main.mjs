@@ -106,7 +106,7 @@ const start = {
     },
 
     image: async (options) => {
-        await start.write_to_screen({mode:"image", text: img_name, bg})
+        await start.write_to_screen({mode:"image", text: options.img_name, bg: options.bg})
     },
 
     py_calendar: async () => {
