@@ -45,6 +45,7 @@ const start = {
     write_to_screen: async (options) => {
         let mode = options.mode
         let arg1 = options.text
+        
 
         let fontsize = options.fontsize
         let bg = options.bg
@@ -52,9 +53,10 @@ const start = {
         if(bg){
             arg2 = bg
         }
+        let arg3 = options.orientation
         console.log(options)
-        await $`echo Writing image to the screen image.... ${mode} ${arg1} ${arg2}`
-        await $`python3 orchestrator.py ${mode} ${arg1} ${arg2}`
+        await $`echo Writing image to the screen image.... ${mode} ${arg1} ${arg2} ${arg3}`
+        await $`python3 orchestrator.py ${mode} ${arg1} ${arg2} ${arg3}`
     },
 
     default_func: async () => {

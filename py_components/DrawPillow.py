@@ -44,7 +44,7 @@ class DrawPillow():
 
     def draw_text(self, input_text, size=24, orientation="L", newline_delim="\n"):
         # based on orientation render text rotate 90 degrees
-        if orientation == "P":
+        if orientation == "P" or orientation == "p":
             self.width = 480
             self.height = 800
             self.Himage = Image.new('1', (self.width, self.height), 255)
