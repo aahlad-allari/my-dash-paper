@@ -39,12 +39,12 @@ class DrawPillow():
     def draw_circle():
         pass
 
-    def get_fonts(self,size=18, style='Roboto-Regular'):
+    def get_fonts(self,size=18, style="Roboto-BlackItalic.ttf"):
         font_path = os.path.join(assets, style)
         print(font_path)
         return ImageFont.truetype(font_path, size)
 
-    def draw_text(self, input_text, size=24, orientation="L", font_style='Roboto-Regular', newline_delim="\n"):
+    def draw_text(self, input_text, size=24, orientation="L", font_style="", newline_delim="\n"):
         # based on orientation render text rotate 90 degrees
         if orientation == "P" or orientation == "p":
             self.width = 480
@@ -58,8 +58,7 @@ class DrawPillow():
             self.draw = ImageDraw.Draw(self.Himage)
 
         if not font_style:
-            font_style = 'Roboto-Regular'
-
+            font_style = "Font.ttc"
         font_size = self.get_fonts(18,style=font_style)
         line_size = 20
         if size == 18:
@@ -210,9 +209,8 @@ class DrawPillow():
     def visual_split(self, text, font, width, response_type='list'):
         font = font
         words = text.split()
-        
-        word_lengths = [(word, font.getsize(word)[0]) for word in words]
-        space_length = font.getsize(' ')[0]
+        word_lengths = [(word, font.getlength(word)) for word in words]
+        space_length = font.getlength(' ')
         
         lines = ['']
         line_length = 0

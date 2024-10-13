@@ -64,7 +64,7 @@ if __name__ == '__main__':
             WEATHER(SCRIPT_DIR, renderer).run()
             # draw.draw_image()
         elif mode == 'hackernews':
-            draw.draw_text(hacker_news_py.get_text(), size=24, newline_delim="\n")
+            draw.draw_text(hacker_news_py.get_text(), size=24, newline_delim="\n", font_style="Roboto-Regular.ttf")
         elif mode == 'dadjoke':
             joke = DAD_JOKE()
             draw.draw_text(joke.shoot(), size=48, newline_delim="\n")
