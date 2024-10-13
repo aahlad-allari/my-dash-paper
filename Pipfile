@@ -7,6 +7,8 @@ name = "pypi"
 pillow = "*"
 numpy = "*"
 docopt = "0.6.2"
+requests = "*"
+matplotlib = "*"
 
 [dev-packages]
 

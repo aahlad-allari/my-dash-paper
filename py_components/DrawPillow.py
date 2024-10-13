@@ -117,7 +117,7 @@ class DrawPillow():
             w = self.height
             h = self.width
         
-        self.Himage.thumbnail(size=(w,h), resample=Image.ANTIALIAS)
+        self.Himage.thumbnail(size=(w,h), resample=Image.Resampling.LANCZOS)
         
         # FIll transparant background with white]
         new_image = Image.new("RGBA", (w,h), b) # Create a white rgba background
